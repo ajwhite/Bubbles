@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title></title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.bubbles.js"></script>
+<link rel="stylesheet" type="text/css" href="animate.css" />
+<script type="text/javascript" src="modernizr.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$("#bubble1").bubbles({
+			right: 200,
+			y: 100,
+			url: "http://www.breastcancercare.org.uk/"
+		});
+	});
+</script>
+<style type="text/css">
+.bubble, .bubble2{ width: 120px; height: 120px; cursor:pointer; z-index:50 }
+.bubble img { position: relative; height: 100px; width: 100px; z-index:50;}
+.bubbleStream { position: absolute; height:20px; width:20px; z-index: 10 !important;}
+body{background-color: #114F8D;}
+
+
+.bubble img, .bubble, .bubble2 img, .bubble2 , #test{
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+-ms-backface-visibility: hidden;
+backface-visibility: hidden;
+-webkit-animation-duration: 1s;
+/* -webkit-animation-delay: .2s; */
+-webkit-animation-timing-function: ease;
+-webkit-animation-fill-mode: both;
+-moz-animation-duration: 1s;
+/* -moz-animation-delay: .2s; */
+-moz-animation-timing-function: ease;
+-moz-animation-fill-mode: both;
+-ms-animation-duration: 1s;
+/* -ms-animation-delay: .2s; */
+-ms-animation-timing-function: ease;
+-ms-animation-fill-mode: both;
+/* animation-duration: 1s; */
+animation-timing-function: ease;
+animation-fill-mode: both;
+}
+
+#test { display:block; width:100px; height:100px;
+
+}
+</style>
+
+</head>
+<body>
+
+<img id="test" src="bubble1.png" />
+<a href="javascript:void(0)" onclick="$('#test').removeClass().addClass('shake');">animation test</a>
+
+
+<div id="bubble1" class="bubble">
+<img src="breastcancer.png" class="bubble-img" />
+</div>
+
+</body>
+</html>
